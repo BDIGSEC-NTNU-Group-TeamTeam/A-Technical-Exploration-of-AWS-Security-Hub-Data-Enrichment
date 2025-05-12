@@ -1,0 +1,102 @@
+{
+  "Findings": [
+    {
+      "AccountId": "061039776389",
+      "Arn": "arn:aws:guardduty:us-east-2:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581/finding/f4cb0fa4bf88b2363d36d8dc59ebf25e",
+      "CreatedAt": "2025-04-10T10:40:32.529Z",
+      "Description": "A privileged container with root level access was launched on EKS Cluster EksGuardDutyTester. If this behavior is not expected, it may indicate that your credentials are compromised.",
+      "Id": "f4cb0fa4bf88b2363d36d8dc59ebf25e",
+      "Partition": "aws",
+      "Region": "us-east-2",
+      "Resource": {
+        "AccessKeyDetails": {
+          "AccessKeyId": "ASIAQ4NSBCKCVKXODUYT",
+          "PrincipalId": "",
+          "UserName": "GuardDutyTesterStack-driverClusterInstanceRole0AF55-BBc1BjBUOvw5",
+          "UserType": "Unknown"
+        },
+        "EksClusterDetails": {
+          "Name": "EksGuardDutyTester",
+          "Arn": "arn:aws:eks:us-east-2:061039776389:cluster/EksGuardDutyTester",
+          "VpcId": "vpc-053573c7e18ef6039",
+          "Status": "ACTIVE",
+          "Tags": [],
+          "CreatedAt": "2025-04-10T10:09:13.202000+00:00"
+        },
+        "KubernetesDetails": {
+          "KubernetesUserDetails": {
+            "Username": "arn:aws:iam::061039776389:role/GuardDutyTesterStack-driverClusterInstanceRole0AF55-BBc1BjBUOvw5",
+            "Uid": "aws-iam-authenticator:061039776389:AROAQ4NSBCKCUTAJRBZWS",
+            "Groups": ["system:masters", "system:authenticated"],
+            "SessionName": ["i-0cefeac36dd6a33b9"]
+          },
+          "KubernetesWorkloadDetails": {
+            "Name": "gd-eks-runtime-tester",
+            "Type": "pods",
+            "Uid": "42dd562d-242e-49fc-bce4-bb5152df6ac8",
+            "Namespace": "default",
+            "HostNetwork": false,
+            "Containers": [
+              {
+                "Name": "gd-eks-runtime-tester",
+                "Image": "061039776389.dkr.ecr.us-east-2.amazonaws.com/gd-eks-tester:latest",
+                "ImagePrefix": "061039776389.dkr.ecr.us-east-2.amazonaws.com",
+                "SecurityContext": {
+                  "Privileged": true
+                }
+              }
+            ]
+          }
+        },
+        "ResourceType": "EKSCluster"
+      },
+      "SchemaVersion": "2.0",
+      "Service": {
+        "Action": {
+          "ActionType": "KUBERNETES_API_CALL",
+          "KubernetesApiCallAction": {
+            "RequestUri": "/api/v1/namespaces/default/pods",
+            "Verb": "create",
+            "SourceIps": ["3.21.219.117"],
+            "UserAgent": "kubectl/v1.27.1 (linux/amd64) kubernetes/4c94112",
+            "RemoteIpDetails": {
+              "City": {
+                "CityName": "Columbus"
+              },
+              "Country": {
+                "CountryName": "United States"
+              },
+              "GeoLocation": {
+                "Lat": 39.9625,
+                "Lon": -83.0061
+              },
+              "IpAddressV4": "3.21.219.117",
+              "Organization": {
+                "Asn": "16509",
+                "AsnOrg": "AMAZON-02",
+                "Isp": "Amazon.com",
+                "Org": "Amazon.com"
+              }
+            },
+            "StatusCode": 201
+          }
+        },
+        "Archived": false,
+        "Count": 1,
+        "DetectorId": "44ca8c6a7f66f8b8f6a0df35fb0e3581",
+        "EventFirstSeen": "2025-04-10T10:39:20.495Z",
+        "EventLastSeen": "2025-04-10T10:39:20.831Z",
+        "ResourceRole": "TARGET",
+        "ServiceName": "guardduty",
+        "AdditionalInfo": {
+          "Value": "{}",
+          "Type": "default"
+        }
+      },
+      "Severity": 5.0,
+      "Title": "A privileged container with root level access was launched on an EKS Cluster.",
+      "Type": "PrivilegeEscalation:Kubernetes/PrivilegedContainer",
+      "UpdatedAt": "2025-04-10T10:40:32.529Z"
+    }
+  ]
+}
