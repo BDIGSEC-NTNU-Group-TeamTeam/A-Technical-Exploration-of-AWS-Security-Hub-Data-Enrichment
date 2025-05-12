@@ -1,0 +1,351 @@
+[
+  {
+    "Summary": "We observed anomalous behavior for GuardDutyTesterStack-driverClusterInstanceRole0AF55-BBc1BjBUOvw5 from 04/03/2025 - 04/17/2025 which might be indicative of compromise. The role invoked CloudTrail management actions mapped to Impact and Execution MITRE tactic(s). The role was also involved in 2 impossible travels, 1 new ASO, 3 new geolocations, and 14 new user agents.",
+    "GraphArn": "arn:aws:detective:us-east-2:061039776389:graph:b18e61ef8d604ecda990595827c43a85",
+    "InvestigationId": "174428210107935097857",
+    "EntityArn": "arn:aws:iam::061039776389:role/GuardDutyTesterStack-driverClusterInstanceRole0AF55-BBc1BjBUOvw5",
+    "EntityType": "IAM_ROLE",
+    "CreatedTime": "2025-04-10T10:48:21.083Z",
+    "ScopeStartTime": "2025-04-03T10:40:32.529Z",
+    "ScopeEndTime": "2025-04-17T10:40:32.529Z",
+    "Status": "SUCCESSFUL",
+    "Severity": "MEDIUM",
+    "State": "ACTIVE",
+    "Indicators": [
+      {
+        "IndicatorType": "NEW_GEOLOCATION",
+        "IndicatorDetail": {
+          "NewGeolocationDetail": {
+            "Location": "Columbus, US, 40.0, -83.0",
+            "IpAddress": "3.13.131.194",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_GEOLOCATION",
+        "IndicatorDetail": {
+          "NewGeolocationDetail": {
+            "Location": "Columbus, US, 40.0, -83.0",
+            "IpAddress": "3.21.219.117",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_GEOLOCATION",
+        "IndicatorDetail": {
+          "NewGeolocationDetail": {
+            "Location": ", US, 37.8, -97.8",
+            "IpAddress": "3.135.120.90",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "IMPOSSIBLE_TRAVEL",
+        "IndicatorDetail": {
+          "ImpossibleTravelDetail": {
+            "StartingIpAddress": "3.13.131.194",
+            "EndingIpAddress": "3.135.120.90",
+            "StartingLocation": "Columbus, US, 40.0, -83.0",
+            "EndingLocation": ", US, 37.8, -97.8",
+            "HourlyTimeDelta": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "IMPOSSIBLE_TRAVEL",
+        "IndicatorDetail": {
+          "ImpossibleTravelDetail": {
+            "StartingIpAddress": "3.21.219.117",
+            "EndingIpAddress": "3.135.120.90",
+            "StartingLocation": "Columbus, US, 40.0, -83.0",
+            "EndingLocation": ", US, 37.8, -97.8",
+            "HourlyTimeDelta": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_ASO",
+        "IndicatorDetail": {
+          "NewAsoDetail": { "Aso": "AMAZON-02", "IsNewForEntireAccount": false }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-sdk-go/1.55.5 (go1.22.7; linux; amd64) amazon-ssm-agent/3.3.1611.0",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-sdk-go/1.55.5 (go1.22.7; linux; amd64) amazon-ssm-agent/",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-cli/2.25.14 md/awscrt#0.25.4 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.12.9 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe md/distrib#amzn.2023 md/prompt#off md/command#ssm.send-command",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-cli/2.25.14 md/awscrt#0.25.4 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.12.9 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe md/distrib#amzn.2023 md/prompt#off md/command#iam.update-account-password-policy",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-cli/2.25.14 md/awscrt#0.25.4 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.12.9 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe md/distrib#amzn.2023 md/prompt#off md/command#eks.update-kubeconfig",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-cli/2.25.14 md/awscrt#0.25.4 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.12.9 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe md/distrib#amzn.2023 md/prompt#off md/command#ecr.get-login-password",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-cli/2.25.14 md/awscrt#0.25.4 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.12.9 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe md/distrib#amzn.2023 md/prompt#off md/command#ecr.create-repository",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-cli/2.25.14 md/awscrt#0.25.4 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.12.9 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe md/distrib#amzn.2023 md/prompt#off md/command#ec2.describe-addresses",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "[aws-cli/2.25.14 md/awscrt#0.25.4 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.12.9 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe md/distrib#amzn.2023 md/prompt#off md/command#s3api.put-bucket-policy]",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "[Boto3/1.37.31 md/Botocore#1.37.31 md/awscrt#0.23.8 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.9.21 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.37.31]",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "Go-http-client/1.1",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "Boto3/1.37.31 md/Botocore#1.37.31 md/awscrt#0.23.8 ua/2.1 os/linux#6.1.131-143.221.amzn2023.x86_64 md/arch#x86_64 lang/python#3.9.21 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.37.31",
+            "IsNewForEntireAccount": true
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "Amazon ECS Agent - v1.91.2 (*77a1d92e) (linux) (+http://aws.amazon.com/ecs/)",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "ecr.amazonaws.com",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Impact",
+            "IpAddress": "3.21.219.117",
+            "APIName": "ecs:RegisterTaskDefinition",
+            "APISuccessCount": 2,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Defense Evasion",
+            "IpAddress": "3.21.219.117",
+            "APIName": "guardduty:UpdateDetector",
+            "APISuccessCount": 1,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Discovery",
+            "IpAddress": "3.21.219.117",
+            "APIName": "ec2:DescribeAddresses",
+            "APISuccessCount": 1,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Discovery",
+            "IpAddress": "3.21.219.117",
+            "APIName": "s3:GetAccountPublicAccessBlock",
+            "APISuccessCount": 1,
+            "APIFailureCount": 1
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Discovery",
+            "IpAddress": "3.21.219.117",
+            "APIName": "guardduty:ListDetectors",
+            "APISuccessCount": 2,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Discovery",
+            "IpAddress": "3.21.219.117",
+            "APIName": "eks:DescribeCluster",
+            "APISuccessCount": 1,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Impact",
+            "IpAddress": "3.21.219.117",
+            "APIName": "s3:PutAccountPublicAccessBlock",
+            "APISuccessCount": 2,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Persistence",
+            "Technique": "IAM Password Policy Manipulation",
+            "Procedure": "Change Account Password Policy",
+            "IpAddress": "3.21.219.117",
+            "APIName": "iam:UpdateAccountPasswordPolicy",
+            "APISuccessCount": 1,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Execution",
+            "Technique": "AWS Systems Manager Run Command",
+            "Procedure": "Execute Commands on Target EC2 Instance Remotely",
+            "IpAddress": "3.21.219.117",
+            "APIName": "ssm:SendCommand",
+            "APISuccessCount": 2,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Impact",
+            "IpAddress": "3.21.219.117",
+            "APIName": "s3:PutBucketPolicy",
+            "APISuccessCount": 0,
+            "APIFailureCount": 1
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Impact",
+            "IpAddress": "3.21.219.117",
+            "APIName": "ecs:RegisterContainerInstance",
+            "APISuccessCount": 1,
+            "APIFailureCount": 0
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Persistence",
+            "IpAddress": "3.21.219.117",
+            "APIName": "ecr:CreateRepository",
+            "APISuccessCount": 1,
+            "APIFailureCount": 0
+          }
+        }
+      }
+    ]
+  }
+]
