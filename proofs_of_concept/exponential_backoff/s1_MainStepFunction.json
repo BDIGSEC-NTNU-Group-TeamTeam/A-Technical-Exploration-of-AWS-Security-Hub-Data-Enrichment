@@ -1,0 +1,45 @@
+{
+  "StartAt": "WaitForInvestigation",
+  "States": {
+    "WaitForInvestigation": {
+      "Type": "Wait",
+      "SecondsPath": "$.waitTime",
+      "Next": "CheckInvestigationStatus",
+      "Comment": "Initial wait time set in input, increases with each loop"
+    },
+    "CheckInvestigationStatus": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:region:account-id:function:StatusCheckerLambda",
+      "ResultPath": "$.checkResult",
+      "Retry": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "IntervalSeconds": 30,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Next": "IsComplete"
+    },
+    "IsComplete": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.checkResult.status",
+          "StringEquals": "complete",
+          "Next": "Success"
+        }
+      ],
+      "Default": "IncreaseWaitTime"
+    },
+    "IncreaseWaitTime": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:region:account-id:function:IncreaseWaitTimeLambda",
+      "ResultPath": "$.waitTime",
+      "Next": "WaitForInvestigation"
+    },
+    "Success": {
+      "Type": "Succeed"
+    }
+  }
+}
