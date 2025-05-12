@@ -1,0 +1,125 @@
+{
+  "AwsAccountId": "061039776389",
+  "CompanyName": "Amazon",
+  "CreatedAt": "2025-04-10T10:40:32.529Z",
+  "Description": "A privileged container with root level access was launched on EKS Cluster EksGuardDutyTester. If this behavior is not expected, it may indicate that your credentials are compromised.",
+  "FindingProviderFields": {
+    "Types": [
+      "TTPs/PrivilegeEscalation/PrivilegeEscalation:Kubernetes-PrivilegedContainer"
+    ],
+    "Severity": {
+      "Normalized": 50,
+      "Label": "MEDIUM",
+      "Product": 5
+    }
+  },
+  "FirstObservedAt": "2025-04-10T10:39:20.495Z",
+  "GeneratorId": "arn:aws:guardduty:us-east-2:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581",
+  "Id": "arn:aws:guardduty:us-east-2:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581/finding/f4cb0fa4bf88b2363d36d8dc59ebf25e",
+  "LastObservedAt": "2025-04-10T10:39:20.831Z",
+  "ProcessedAt": "2025-04-10T10:45:24.985Z",
+  "ProductArn": "arn:aws:securityhub:us-east-2::product/aws/guardduty",
+  "ProductFields": {
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/organization/asn": "16509",
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/ipAddressV4": "3.21.219.117",
+    "aws/guardduty/service/archived": "false",
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/geoLocation/lat": "39.9625",
+    "aws/guardduty/service/additionalInfo/value": "",
+    "aws/guardduty/service/action/kubernetesApiCallAction/verb": "create",
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/country/countryName": "United States",
+    "aws/guardduty/service/resourceRole": "TARGET",
+    "aws/guardduty/service/action/kubernetesApiCallAction/sourceIPs.0_": "3.21.219.117",
+    "aws/guardduty/service/action/kubernetesApiCallAction/statusCode": "201",
+    "aws/guardduty/service/count": "1",
+    "aws/guardduty/service/additionalInfo/type": "default",
+    "aws/guardduty/service/serviceName": "guardduty",
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/geoLocation/lon": "-83.0061",
+    "aws/guardduty/service/detectorId": "44ca8c6a7f66f8b8f6a0df35fb0e3581",
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/organization/org": "Amazon.com",
+    "aws/guardduty/service/action/kubernetesApiCallAction/requestUri": "/api/v1/namespaces/default/pods",
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/city/cityName": "Columbus",
+    "aws/guardduty/service/eventFirstSeen": "2025-04-10T10:39:20.495Z",
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/organization/asnOrg": "AMAZON-02",
+    "aws/guardduty/service/action/kubernetesApiCallAction/remoteIpDetails/organization/isp": "Amazon.com",
+    "aws/guardduty/service/eventLastSeen": "2025-04-10T10:39:20.831Z",
+    "aws/guardduty/service/action/actionType": "KUBERNETES_API_CALL",
+    "aws/guardduty/service/action/kubernetesApiCallAction/userAgent": "kubectl/v1.27.1 (linux/amd64) kubernetes/4c94112",
+    "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-2::product/aws/guardduty/arn:aws:guardduty:us-east-2:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581/finding/f4cb0fa4bf88b2363d36d8dc59ebf25e",
+    "aws/securityhub/ProductName": "GuardDuty",
+    "aws/securityhub/CompanyName": "Amazon"
+  },
+  "ProductName": "GuardDuty",
+  "RecordState": "ACTIVE",
+  "Region": "us-east-2",
+  "Resources": [
+    {
+      "Details": {
+        "AwsIamAccessKey": {
+          "PrincipalName": "GuardDutyTesterStack-driverClusterInstanceRole0AF55-BBc1BjBUOvw5",
+          "PrincipalType": "Unknown"
+        }
+      },
+      "Id": "AWS::IAM::AccessKey:ASIAQ4NSBCKCVKXODUYT",
+      "Partition": "aws",
+      "Region": "us-east-2",
+      "Type": "AwsIamAccessKey"
+    },
+    {
+      "Details": {
+        "AwsEksCluster": {
+          "Arn": "arn:aws:eks:us-east-2:061039776389:cluster/EksGuardDutyTester",
+          "ClusterStatus": "ACTIVE",
+          "Name": "EksGuardDutyTester"
+        },
+        "Other": {
+          "kubernetesDetails/kubernetesWorkloadDetails/containers.0_/volumeMounts": "",
+          "kubernetesDetails/kubernetesWorkloadDetails/containers.0_/id": "",
+          "kubernetesDetails/kubernetesWorkloadDetails/selector": "",
+          "kubernetesDetails/kubernetesWorkloadDetails/namespace": "default",
+          "kubernetesDetails/kubernetesWorkloadDetails/hostPID": "",
+          "kubernetesDetails/kubernetesUserDetails/groups.1_": "system:authenticated",
+          "kubernetesDetails/kubernetesWorkloadDetails/creationTimestamp": "",
+          "kubernetesDetails/kubernetesWorkloadDetails/containers.0_/securityContext/privileged": "true",
+          "kubernetesDetails/kubernetesWorkloadDetails/type": "pods",
+          "kubernetesDetails/kubernetesUserDetails/sessionName.0_": "i-0cefeac36dd6a33b9",
+          "kubernetesDetails/kubernetesWorkloadDetails/containers.0_/containerRuntime": "",
+          "kubernetesDetails/kubernetesWorkloadDetails/hostNetwork": "false",
+          "kubernetesDetails/kubernetesWorkloadDetails/containers.0_/imagePrefix": "061039776389.dkr.ecr.us-east-2.amazonaws.com",
+          "kubernetesDetails/kubernetesWorkloadDetails/containers.0_/name": "gd-eks-runtime-tester",
+          "kubernetesDetails/kubernetesWorkloadDetails/hostIPC": "",
+          "kubernetesDetails/kubernetesWorkloadDetails/labels": "",
+          "kubernetesDetails/kubernetesUserDetails/groups.0_": "system:masters",
+          "kubernetesDetails/kubernetesWorkloadDetails/volumes": "",
+          "kubernetesDetails/kubernetesWorkloadDetails/uid": "42dd562d-242e-49fc-bce4-bb5152df6ac8",
+          "kubernetesDetails/kubernetesWorkloadDetails/podSecurityContext": "",
+          "kubernetesDetails/kubernetesUserDetails/username": "arn:aws:iam::061039776389:role/GuardDutyTesterStack-driverClusterInstanceRole0AF55-BBc1BjBUOvw5",
+          "kubernetesDetails/kubernetesUserDetails/uid": "aws-iam-authenticator:061039776389:AROAQ4NSBCKCUTAJRBZWS",
+          "kubernetesDetails/kubernetesWorkloadDetails/name": "gd-eks-runtime-tester",
+          "kubernetesDetails/kubernetesWorkloadDetails/containers.0_/imageUid": "",
+          "kubernetesDetails/kubernetesWorkloadDetails/containers.0_/image": "061039776389.dkr.ecr.us-east-2.amazonaws.com/gd-eks-tester:latest"
+        }
+      },
+      "Id": "arn:aws:eks:us-east-2:061039776389:cluster/EksGuardDutyTester",
+      "Partition": "aws",
+      "Region": "us-east-2",
+      "Type": "AwsEksCluster"
+    }
+  ],
+  "Sample": false,
+  "SchemaVersion": "2018-10-08",
+  "Severity": {
+    "Label": "MEDIUM",
+    "Normalized": 50,
+    "Product": 5
+  },
+  "SourceUrl": "https://us-east-2.console.aws.amazon.com/guardduty/home?region=us-east-2#/findings?macros=current&fId=f4cb0fa4bf88b2363d36d8dc59ebf25e",
+  "Title": "A privileged container with root level access was launched on an EKS Cluster.",
+  "Types": [
+    "TTPs/PrivilegeEscalation/PrivilegeEscalation:Kubernetes-PrivilegedContainer"
+  ],
+  "UpdatedAt": "2025-04-10T10:40:32.529Z",
+  "Workflow": {
+    "Status": "NEW"
+  },
+  "WorkflowState": "NEW"
+}
