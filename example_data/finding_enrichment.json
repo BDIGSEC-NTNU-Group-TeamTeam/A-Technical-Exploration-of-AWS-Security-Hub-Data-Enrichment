@@ -1,0 +1,260 @@
+{
+  "SecurityHubFinding": {
+    "ProductArn": "arn:aws:securityhub:us-east-2::product/aws/guardduty",
+    "Types": ["TTPs/PenTest:IAMUser/KaliLinux"],
+    "SourceUrl": "https://us-east-1.console.aws.amazon.com/guardduty/home?region=us-east-1#/findings?macros=current&fId=aacb30e8b630f94c5799d919a4c42619",
+    "Action": {
+      "ActionType": "AWS_API_CALL",
+      "AwsApiCallAction": {
+        "ServiceName": "iam.amazonaws.com",
+        "RemoteIpDetails": {
+          "IpAddressV4": "18.218.119.217",
+          "Organization": {
+            "Org": "Amazon.com",
+            "Isp": "Amazon.com",
+            "AsnOrg": "AMAZON-02",
+            "Asn": 16509
+          },
+          "Country": { "CountryName": "United States", "CountryCode": "US" },
+          "City": { "CityName": "Columbus" },
+          "GeoLocation": { "Lon": -83.0061, "Lat": 39.9625 }
+        },
+        "Api": "GetUser",
+        "CallerType": "remoteIp"
+      }
+    },
+    "Description": "The API GetUser was invoked from a remote host with IP address 18.218.119.217 that is potentially running the Kali Linux penetration testing tool.",
+    "ProductName": "GuardDuty",
+    "FirstObservedAt": "2025-04-23T08:36:51.000Z",
+    "CreatedAt": "2025-04-23T08:43:56.897Z",
+    "LastObservedAt": "2025-04-23T09:02:17.000Z",
+    "CompanyName": "Amazon",
+    "FindingProviderFields": {
+      "Types": ["TTPs/PenTest:IAMUser/KaliLinux"],
+      "Severity": { "Normalized": 50, "Label": "MEDIUM", "Product": 5 }
+    },
+    "ProductFields": {
+      "aws/guardduty/service/action/awsApiCallAction/errorCode": "AccessDenied",
+      "aws/guardduty/service/archived": "false",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/asnOrg": "AMAZON-02",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/org": "Amazon.com",
+      "aws/guardduty/service/additionalInfo/value": "",
+      "aws/guardduty/service/resourceRole": "TARGET",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/isp": "Amazon.com",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/geoLocation/lat": "39.9625",
+      "aws/guardduty/service/count": "2",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/ipAddressV4": "18.218.119.217",
+      "aws/guardduty/service/action/awsApiCallAction/callerType": "Remote IP",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/country/countryName": "United States",
+      "aws/guardduty/service/action/awsApiCallAction/serviceName": "iam.amazonaws.com",
+      "aws/guardduty/service/additionalInfo/type": "default",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/city/cityName": "Columbus",
+      "aws/guardduty/service/action/awsApiCallAction/api": "GetUser",
+      "aws/guardduty/service/serviceName": "guardduty",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/geoLocation/lon": "-83.0061",
+      "aws/guardduty/service/detectorId": "44ca8c6a7f66f8b8f6a0df35fb0e3581",
+      "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/asn": "16509",
+      "aws/guardduty/service/action/awsApiCallAction/affectedResources": "",
+      "aws/guardduty/service/eventFirstSeen": "2025-04-23T08:36:51.000Z",
+      "aws/guardduty/service/eventLastSeen": "2025-04-23T09:02:17.000Z",
+      "aws/guardduty/service/action/actionType": "AWS_API_CALL",
+      "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-2::product/aws/guardduty/arn:aws:guardduty:us-east-1:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581/finding/aacb30e8b630f94c5799d919a4c42619",
+      "aws/securityhub/ProductName": "GuardDuty",
+      "aws/securityhub/CompanyName": "Amazon"
+    },
+    "SchemaVersion": "2018-10-08",
+    "GeneratorId": "arn:aws:guardduty:us-east-1:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581",
+    "Sample": false,
+    "RecordState": "ACTIVE",
+    "Title": "The API GetUser was invoked from a Kali Linux computer.",
+    "Workflow": { "Status": "NOTIFIED" },
+    "Severity": { "Normalized": 50, "Label": "MEDIUM", "Product": 5 },
+    "UpdatedAt": "2025-04-23T09:09:24.055Z",
+    "WorkflowState": "NEW",
+    "AwsAccountId": "061039776389",
+    "Region": "us-east-2",
+    "Id": "arn:aws:guardduty:us-east-1:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581/finding/aacb30e8b630f94c5799d919a4c42619",
+    "Resources": [
+      {
+        "Partition": "aws",
+        "Type": "AwsEc2Instance",
+        "Details": {
+          "AwsEc2Instance": {
+            "Type": "t3.micro",
+            "VpcId": "vpc-06dde6094687aece1",
+            "ImageId": "ami-0ae0a81f0de6b0bcd",
+            "IpV4Addresses": ["172.16.0.156", "18.218.119.217"],
+            "SubnetId": "subnet-08e1123d5522f145d",
+            "LaunchedAt": "2025-04-23T07:55:38.000Z",
+            "IamInstanceProfileArn": "arn:aws:iam::061039776389:instance-profile/GuardDutyTesterStack-kaliLinuxInstanceInstanceProfile661B33BB-fNWFXszPlnH8"
+          }
+        },
+        "Region": "us-east-1",
+        "Id": "arn:aws:ec2:us-east-1:061039776389:instance/i-0b657cb88cfff0179",
+        "Tags": {
+          "GuardDutyTestFramework": "Instance",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-2:061039776389:stack/GuardDutyTesterStack/df729350-2017-11f0-921a-02d6d5c9829d",
+          "Name": "Kali-GuardDutyTester",
+          "aws:cloudformation:logical-id": "kaliLinuxInstance328E3459351b45105a9b6d70",
+          "CreatedBy": "GuardDuty Test Script",
+          "aws:cloudformation:stack-name": "GuardDutyTesterStack"
+        }
+      },
+      {
+        "Partition": "aws",
+        "Type": "AwsIamAccessKey",
+        "Details": {
+          "AwsIamAccessKey": {
+            "PrincipalId": "AROAQ4NSBCKCQ3M7JIITG:i-0b657cb88cfff0179",
+            "PrincipalName": "GuardDutyTesterStack-Role8C6B06EB-w1hOHDtSfdmA",
+            "PrincipalType": "AssumedRole"
+          }
+        },
+        "Region": "us-east-1",
+        "Id": "AWS::IAM::AccessKey:ASIAQ4NSBCKCR6UKUQ2D"
+      }
+    ],
+    "Note": {
+      "UpdatedBy": "061039776389",
+      "Text": "Scenario 1",
+      "UpdatedAt": "2025-04-23T11:47:12.133Z"
+    },
+    "ProcessedAt": "2025-04-23T12:07:10.161Z"
+  },
+  "DetectiveData": {
+    "ResponseMetadata": {
+      "RequestId": "69ef43c5-4f83-4ad9-8f28-63ecf4a646e5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 28 Apr 2025 11:14:56 GMT",
+        "content-type": "application/json",
+        "content-length": "440",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "69ef43c5-4f83-4ad9-8f28-63ecf4a646e5",
+        "x-amz-apigw-id": "JuxvqHIaiYcELSQ=",
+        "x-amzn-trace-id": "Root=1-680f632a-0f1b20ed3410d9f016bfd25d"
+      },
+      "RetryAttempts": 0
+    },
+    "GraphArn": "arn:aws:detective:us-east-2:061039776389:graph:b18e61ef8d604ecda990595827c43a85",
+    "InvestigationId": "174583889307383816455",
+    "EntityArn": "arn:aws:iam::061039776389:role/GuardDutyTesterStack-Role8C6B06EB-w1hOHDtSfdmA",
+    "EntityType": "IAM_ROLE",
+    "CreatedTime": "2025-04-28T11:14:53.172000+00:00",
+    "ScopeStartTime": "2025-04-22T08:43:56.897000+00:00",
+    "ScopeEndTime": "2025-04-24T08:43:56.897000+00:00",
+    "Status": "SUCCESSFUL",
+    "Severity": "CRITICAL",
+    "State": "ACTIVE",
+    "Indicators": [
+      {
+        "IndicatorType": "NEW_GEOLOCATION",
+        "IndicatorDetail": {
+          "NewGeolocationDetail": {
+            "Location": "Columbus, US, 40.0, -83.0",
+            "IpAddress": "18.218.119.217",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_ASO",
+        "IndicatorDetail": {
+          "NewAsoDetail": { "Aso": "AMAZON-02", "IsNewForEntireAccount": false }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-sdk-go/1.55.5 (go1.23.7; linux; amd64) amazon-ssm-agent/3.3.2299.0 EC2DetectorStatus:true|IMDSEC2DetectionStatus:true",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-sdk-go/1.55.5 (go1.23.7; linux; amd64) amazon-ssm-agent/3.3.2299.0",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-cli/2.23.6 md/awscrt#1.0.0.dev0 ua/2.0 os/linux#6.12.13-cloud-amd64 md/arch#x86_64 lang/python#3.13.2 md/pyimpl#CPython cfg/retry-mode#standard md/installer#source md/distrib#kali.2025 md/prompt#off md/command#sts.assume-role",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "NEW_USER_AGENT",
+        "IndicatorDetail": {
+          "NewUserAgentDetail": {
+            "UserAgent": "aws-cli/2.23.6 md/awscrt#1.0.0.dev0 ua/2.0 os/linux#6.12.13-cloud-amd64 md/arch#x86_64 lang/python#3.13.2 md/pyimpl#CPython cfg/retry-mode#standard md/installer#source md/distrib#kali.2025 md/prompt#off md/command#iam.get-user",
+            "IsNewForEntireAccount": false
+          }
+        }
+      },
+      {
+        "IndicatorType": "TTP_OBSERVED",
+        "IndicatorDetail": {
+          "TTPsObservedDetail": {
+            "Tactic": "Discovery",
+            "IpAddress": "18.218.119.217",
+            "APIName": "iam:GetUser",
+            "APISuccessCount": 0,
+            "APIFailureCount": 2
+          }
+        }
+      },
+      {
+        "IndicatorType": "RELATED_FINDING_GROUP",
+        "IndicatorDetail": {
+          "RelatedFindingGroupDetail": {
+            "Id": "0891b35d-b4db-4ebc-8654-221fa393012a"
+          }
+        }
+      },
+      {
+        "IndicatorType": "RELATED_FINDING",
+        "IndicatorDetail": {
+          "RelatedFindingDetail": {
+            "Arn": "arn:aws:guardduty:us-east-2:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581/finding/1acb30e7c93f83b261abcf23cddebbea",
+            "Type": "TTPs/PenTest:S3-KaliLinux"
+          }
+        }
+      },
+      {
+        "IndicatorType": "RELATED_FINDING",
+        "IndicatorDetail": {
+          "RelatedFindingDetail": {
+            "Arn": "arn:aws:guardduty:us-east-2:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581/finding/4ccb30f3c06fd875df19c3f5d20d5799",
+            "Type": "TTPs/AttackSequence:S3/CompromisedData"
+          }
+        }
+      },
+      {
+        "IndicatorType": "RELATED_FINDING",
+        "IndicatorDetail": {
+          "RelatedFindingDetail": {
+            "Arn": "arn:aws:guardduty:us-east-1:061039776389:detector/44ca8c6a7f66f8b8f6a0df35fb0e3581/finding/aacb30e8b630f94c5799d919a4c42619",
+            "Type": "TTPs/PenTest:IAMUser/KaliLinux"
+          }
+        }
+      },
+      {
+        "IndicatorType": "FLAGGED_IP_ADDRESS",
+        "IndicatorDetail": {
+          "FlaggedIpAddressDetail": {
+            "IpAddress": "18.218.119.217",
+            "Reason": "AWS_THREAT_INTELLIGENCE"
+          }
+        }
+      }
+    ]
+  }
+}
